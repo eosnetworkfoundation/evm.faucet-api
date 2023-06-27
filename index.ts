@@ -28,6 +28,7 @@ export function toJSON(data: any, status = 200) {
     return new Response(JSON.stringify(data), {status, headers: {
         'Content-Type': 'application/json',
          // CORS
+        'Access-Control-Allow-Credentials': 'true',
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': '*',
     }});

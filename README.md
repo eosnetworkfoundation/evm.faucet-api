@@ -11,7 +11,7 @@ $ npm install
 $ npm start
 ```
 
-## Example
+## HTTP Request
 
 ```http
 POST http://localhost:3000 HTTP/1.1

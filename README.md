@@ -4,11 +4,15 @@
 
 ## Quickstart
 
+Install **Bun**
+
+> curl -fsSL https://bun.sh/install | bash
+
 ```bash
 $ gh repo clone eosnetworkfoundation/evm.faucet-api
 $ cd evm.faucet-api
-$ npm install
-$ npm start
+$ bun install
+$ bun index.ts
 ```
 
 ## HTTP Request

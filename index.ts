@@ -5,13 +5,6 @@ import { nonce, send } from "./src/actions.js";
 
 export default {
     port: PORT,
-    cors: true,
-    Headers: {
-        'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type'
-    },
     async fetch(request: Request) {
         const session = createSession();
         const url = new URL(request.url);
@@ -32,14 +25,25 @@ export default {
     },
 };
 
+export function cors() {
+    return {
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type'
+    }
+}
+
 export function toJSON(data: any, status = 200) {
     return new Response(JSON.stringify(data), {status, headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...cors()
     }});
 }
 
 export function toText(data: any, status = 200) {
     return new Response(data, {status, headers: {
         'Content-Type': 'text/plain;charset=utf-8',
+        ...cors()
     }});
 }

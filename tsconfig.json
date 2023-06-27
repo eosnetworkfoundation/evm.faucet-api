@@ -1,0 +1,16 @@
+{
+    "extends": "@tsconfig/recommended",
+    "compilerOptions": {
+            "target": "ESNext",
+            "module": "ESNext",
+            "moduleResolution": "nodenext",
+            "outDir": "dist",
+            "declaration": true,
+            "resolveJsonModule": true,
+            "types": ["bun-types"]
+        },
+        "include": [
+            "index.ts",
+            "src/**/*"
+        ],
+}

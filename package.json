@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "version": "0.1.0",
+  "name": "@enf/eos-faucet",
+  "type": "module",
+  "contributors": [
+    "Denis Carriere <denis@pinax.network>"
+  ],
+  "scripts": {
+    "start": "bun ./index.ts start --verbose",
+    "build": "bun build --compile ./index.ts --outfile evm-faucet",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@wharfkit/session": "0.5",
+    "@wharfkit/wallet-plugin-privatekey": "0.5",
+    "dotenv": "latest"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "latest",
+    "@types/node": "latest",
+    "bun-types": "latest",
+    "typescript": "latest"
+  }
+}

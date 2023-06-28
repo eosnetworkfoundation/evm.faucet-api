@@ -15,6 +15,13 @@ $ bun install
 $ bun index.ts
 ```
 
+## Docker environment
+
+```
+docker build -t eos-evm-faucet .
+docker run -it --rm -p 3000:3000 --env-file .env eos-evm-faucet
+```
+
 ## HTTP Request
 
 ```http
